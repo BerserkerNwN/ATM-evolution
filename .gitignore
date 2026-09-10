@@ -1,0 +1,10 @@
+# 1. Ignorar la carpeta basura que crea Python automáticamente al ejecutar el código
+__pycache__/
+*.pyc
+
+# 2. Ignorar configuraciones locales de tu editor de texto (VS Code)
+.vscode/
+
+# 3. Ignorar archivos ocultos del sistema operativo (Windows/Mac)
+.DS_Store
+Thumbs.db
