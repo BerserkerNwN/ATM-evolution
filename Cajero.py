@@ -12,7 +12,15 @@ class CuentaBancaria:
         print(f".Contraseña: {self.contraseña}")
 
     def cambiar_contraseña(self):
-        self.contraseña = str(input("Digite su nueva contraseña: "))
+        while True:
+            self.contraseña = str(input("Digite su nueva contraseña: "))
+            if len(self.contraseña) >=8:
+                if not self.contraseña.isalnum():
+                    break
+                else:
+                    print("Su contraseña debe tener como minimo un caracter especial")
+            else:
+                print("Su contraseña no puede ser menor a 8 digitos")
         
 
 
