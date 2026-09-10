@@ -21,6 +21,9 @@ class CuentaBancaria:
                     print("Su contraseña debe tener como minimo un caracter especial")
             else:
                 print("Su contraseña no puede ser menor a 8 digitos")
+
+    def saludar():
+        print("hola")
         
 
 
