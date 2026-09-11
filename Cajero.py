@@ -22,6 +22,23 @@ class CuentaBancaria:
             else:
                 print("Su contraseña no puede ser menor a 8 digitos")
 
+    def retirar(self):
+        while True:
+            retiro = int(input("Digite cuanto va a retirar: "))
+            if retiro > 0:
+                if retiro <= self.saldo:
+                    print(f"Usted a retirado ${retiro} COP")
+                    self.saldo -= retiro
+                    return self.saldo
+                else:
+                    print("Error, usted no puede retirar mas de lo que tiene")
+            else:
+                print("Error, usted no puede retirar una cantidad menor a $0 COP")
+            break
+                
+                    
+                    
+
     def saludar():
         print("hola")
         
@@ -29,5 +46,5 @@ class CuentaBancaria:
 
 
 mi_cuenta = CuentaBancaria("Felipe", 30000, "Bancolombia", "1234")
-mi_cuenta.cambiar_contraseña()
+mi_cuenta.retirar()
 mi_cuenta.atributos()
