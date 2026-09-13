@@ -30,12 +30,24 @@ class CuentaBancaria:
                     print(f"Usted a retirado ${retiro} COP")
                     self.saldo -= retiro
                     return self.saldo
+                    break
                 else:
                     print("Error, usted no puede retirar mas de lo que tiene")
             else:
                 print("Error, usted no puede retirar una cantidad menor a $0 COP")
-            break
-                
+            
+
+    def depositar(self):
+        while True:
+            deposito = int(input("Digite cuanto va a depositar: "))
+            if deposito >= 0:
+                print(f"Usted ha depositado ${deposito} COP")
+                self.saldo += deposito
+                return self.saldo
+                break
+            else:
+                print("Error, usted no puede depositar una cantidad menor a $0 COP")
+            
                     
                     
 
