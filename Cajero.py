@@ -30,11 +30,11 @@ class CuentaBancaria:
                     print(f"Usted a retirado ${retiro} COP")
                     self.saldo -= retiro
                     return self.saldo
-                    break
                 else:
                     print("Error, usted no puede retirar mas de lo que tiene")
             else:
                 print("Error, usted no puede retirar una cantidad menor a $0 COP")
+                    
             
 
     def depositar(self):
@@ -44,11 +44,20 @@ class CuentaBancaria:
                 print(f"Usted ha depositado ${deposito} COP")
                 self.saldo += deposito
                 return self.saldo
-                break
             else:
                 print("Error, usted no puede depositar una cantidad menor a $0 COP")
+                
             
-                    
+    def InicioSesion(self):
+        while True:
+            contraseña_usuario = str(input("Bienvenido! digite su contraseña: "))
+            if contraseña_usuario == self.contraseña:
+                print(f"Bienvenido señor/a {self.nombre}")
+                return True
+            else:
+                print("Error: digite su contraseña denuevo")
+                
+            
                     
 
     def saludar():
@@ -58,5 +67,5 @@ class CuentaBancaria:
 
 
 mi_cuenta = CuentaBancaria("Felipe", 30000, "Bancolombia", "1234")
-mi_cuenta.retirar()
+mi_cuenta.InicioSesion()
 mi_cuenta.atributos()
