@@ -83,14 +83,18 @@ class CuentaBancaria:
                     print("Error, intentelo denuevo")
 
                 
-    
-                    
-
+    def FlujodeControl(self):
+        if self.InicioSesion() == True:
+            self.MenuInteractivo()
+        
     def saludar():
         print("hola")
+
+mi_cuenta = CuentaBancaria("Felipe", 30000, "Bancolombia", "1234")
+mi_cuenta.FlujodeControl()
+                    
+
         
 
 
 
-mi_cuenta = CuentaBancaria("Felipe", 30000, "Bancolombia", "1234")
-mi_cuenta.MenuInteractivo()
