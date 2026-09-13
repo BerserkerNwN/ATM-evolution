@@ -55,9 +55,35 @@ class CuentaBancaria:
                 print(f"Bienvenido señor/a {self.nombre}")
                 return True
             else:
-                print("Error: digite su contraseña denuevo")
+                print("Error: digite su contraseña denuevo") 
+
+    def MenuInteractivo(self):
+        while True:
+            menu = int(input("""
+            Bienvenido asu menu interactivo, digite una opcion:
+            1 para consultar estado de la cuenta
+            2 para retirar saldo
+            3 para depositar saldo
+            4 para cambiar la contraseña
+            5 para salir :)
+            """))
+            match menu:
+                case 1:
+                    self.atributos()
+                case 2:
+                    self.retirar()
+                case 3:
+                    self.depositar()
+                case 4:
+                    self.cambiar_contraseña()
+                case 5:
+                    print("Hazta luego!")
+                    break
+                case _:
+                    print("Error, intentelo denuevo")
+
                 
-            
+    
                     
 
     def saludar():
@@ -67,5 +93,4 @@ class CuentaBancaria:
 
 
 mi_cuenta = CuentaBancaria("Felipe", 30000, "Bancolombia", "1234")
-mi_cuenta.InicioSesion()
-mi_cuenta.atributos()
+mi_cuenta.MenuInteractivo()
