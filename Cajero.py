@@ -11,6 +11,20 @@ class CuentaBancaria:
         print(f".Banco: {self.banco}")
         print(f".Contraseña: {self.contraseña}")
 
+    def comprobador(self, mensaje):
+        while True:
+            try:
+                monto = float(input(mensaje))
+                if monto <0:
+                    print("Error, no puede digitar una cantidad menor a 0")
+                elif monto == 0:
+                    print("Operacion cancelada por el usuario")
+                    return 0
+                else:
+                    return monto
+            except ValueError:
+                print("ERROR: no puede digitar un caracter diferente a entero/decimal")
+
     def cambiar_contraseña(self):
         while True:
             self.contraseña = str(input("Digite su nueva contraseña: "))
@@ -93,6 +107,15 @@ class CuentaBancaria:
 mi_cuenta = CuentaBancaria("Felipe", 30000, "Bancolombia", "1234")
 mi_cuenta.FlujodeControl()
                     
+                
+                
+
+
+
+
+
+
+
 
         
 
